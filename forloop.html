@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Practice Lecture 1 For Loop</title>
+  </head>
+
+  <body>
+    <script>
+      // For Loop
+
+      // let val = "";
+
+      // for (let i = 0; i <= 20; i++) {
+      //     val = val + i;
+      //     console.log(val);
+      // }
+
+      // let n = "Hello";
+
+      // for (let i = 0; i < 30; i++) {
+      //     // n = n + i;
+      //     document.write(n);
+      //     // console.log(n);
+      // }
+
+      let n = 5; // row or column count
+      // defining an empty string
+      let string = "";
+
+      for (let i = 0; i < n; i++) {
+        // external loop
+        for (let j = 0; j < n; j++) {
+          // internal loop
+          if (i === 0 || i === n - 1) {
+            string += "*";
+          } else {
+            if (j === 0 || j === n - 1) {
+              string += "*";
+            } else {
+              string += " ";
+            }
+          }
+        }
+        // newline after each row
+        string += "\n";
+      }
+      // printing the string
+      console.log(string);
+    </script>
+  </body>
+</html>
