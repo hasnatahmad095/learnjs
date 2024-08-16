@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Events & Function Declaration</title>
+    <style>
+        .btn {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+
+        .active {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- onchange An HTML element has been changed
+    onclick The user clicks an HTML element
+    onmouseover The user moves the mouse over an HTML element
+    onmouseout The user moves the mouse away from an HTML element
+    onkeydown The user pushes a keyboard key
+    onload The browser has finished loading the page -->
+
+    <button class="btn" onmouseover="mouse(this)"></button>
+    <!-- onclick="toggle()" -->
+
+    <script>
+        let btn = document.getElementsByClassName("btn")
+        // console.log(btn,"btn");
+
+        // function toggle() {
+        //     btn[0].style.backgroundColor = "red"
+        // }
+
+        // function toggle() {
+        //     btn[0].classList.toggle("active")
+        // }
+
+        // function mouse(element) {
+        //     element.classList.add("active");
+        // }
+    </script>
+</body>
+
+</html>

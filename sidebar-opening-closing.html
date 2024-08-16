@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Example</title>
+    <style>
+        /* Basic styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #toggleButton {
+            margin: 20px;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            /* Hidden by default */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: left 0.3s ease;
+        }
+
+        .sidebar.open {
+            left: 0;
+            /* Sidebar is shown */
+        }
+
+        /* Overlay styles */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="toggleButton">Toggle Sidebar</button>
+
+    <div id="sidebar" class="sidebar">
+        <h2>Sidebar Menu</h2>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script>
+        // Select the necessary elements
+        const toggleButton = document.getElementById('toggleButton');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        // Function to toggle the sidebar and overlay
+        function toggleSidebar() {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('visible');
+        }
+
+        // Function to close the sidebar
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('visible');
+        }
+
+        // Add event listener to the button to toggle the sidebar
+        toggleButton.addEventListener('click', toggleSidebar);
+
+        // Add event listener to the overlay to close the sidebar when clicked outside
+        overlay.addEventListener('click', closeSidebar);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Cards</title>
+    <style>
+        .card {
+            width: 100px;
+            height: 150px;
+            background-color: red;
+            margin: 10px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .card.spread {
+            transform: scale(1.05);
+            background-color: lightblue;
+        }
+
+        .card.hovered {
+            transform: scale(1.1);
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+    <script>
+        // Select all the cards
+        const cards = document.querySelectorAll('.card');
+
+        // Loop through each card to add the 'spread' class
+        cards.forEach(card => {
+            card.classList.add('spread');
+
+            // Add event listeners for hover effects
+            card.addEventListener('mouseover', () => {
+                card.classList.add('hovered');
+            });
+
+            card.addEventListener('mouseout', () => {
+                card.classList.remove('hovered');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

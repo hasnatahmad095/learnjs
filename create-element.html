@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element JS</title>
+</head>
+
+<body>
+    <script>
+        // Navbar
+        let x = document.createElement("div")
+        x.style.width = "100%"
+        x.style.height = "100px"
+        x.style.backgroundColor = "red"
+        document.body.appendChild(x)
+
+        // Logo 
+        let logo = document.createElement("img");
+        logo.setAttribute("src", "https://w7.pngwing.com/pngs/643/143/png-transparent-nextjs-hd-logo.png");
+        x.appendChild(logo);
+        logo.style.width = "70px"
+        logo.style.marginTop = "30px"
+        logo.style.marginLeft = "25px"
+        logo.style.borderRadius = "5px"
+
+        // Unordered List
+        let ul = document.createElement("ul")
+        console.log(ul);
+        x.appendChild(ul)
+
+
+        // Lists
+        let listOne = document.createElement("li")
+        console.log(listOne);
+        listOne.innerText = "Home"
+        ul.appendChild(listOne)
+        listOne.style.color = "black"
+        listOne.style.listStyle = "none"
+        listOne.style.marginLeft = "300px"
+        listOne.style.marginTop = "-50px"
+
+    </script>
+</body>
+
+</html>

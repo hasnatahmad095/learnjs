@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity Slider Example</title>
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #targetElement {
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            margin-top: 20px;
+            line-height: 200px;
+            color: white;
+            font-size: 20px;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="range" id="opacitySlider" min="0" max="100" value="100">
+        <label for="opacitySlider">Adjust Opacity</label>
+        <div id="targetElement" class="box">This is a box</div>
+    </div>
+
+    <script>
+        // script.js
+        const slider = document.getElementById('opacitySlider');
+        const targetElement = document.getElementById('targetElement');
+
+        // Function to update the opacity
+        function updateOpacity() {
+            const opacityValue = slider.value / 100; // Convert slider value to a fraction (0-1)
+            targetElement.style.opacity = opacityValue;
+        }
+
+        // Add event listener to slider
+        slider.addEventListener('input', updateOpacity);
+
+        // Initialize opacity on page load
+        updateOpacity();
+
+    </script>
+</body>
+
+</html>
