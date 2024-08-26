@@ -5,41 +5,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Element JS</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0px 14px;
+        }
+    </style>
 </head>
 
 <body>
     <script>
-        // Navbar
-        let x = document.createElement("div")
+
+        // Header Start Here
+
+        let x = document.createElement("header")
         x.style.width = "100%"
-        x.style.height = "100px"
-        x.style.backgroundColor = "red"
+        x.style.backgroundColor = "#000"
+        x.style.position = "absolute"
+        x.style.left = "0px"
+        x.style.right = "0px"
+        x.style.padding = "20px 0px"
         document.body.appendChild(x)
+
+        // Container
+        let Boxed = document.createElement("div")
+        Boxed.setAttribute("class", "container")
+        Boxed.style.display = "flex"
+        Boxed.style.alignItems = "center"
+        Boxed.style.justifyContent = "space-between"
+        x.appendChild(Boxed);
 
         // Logo 
         let logo = document.createElement("img");
         logo.setAttribute("src", "https://w7.pngwing.com/pngs/643/143/png-transparent-nextjs-hd-logo.png");
-        x.appendChild(logo);
+        Boxed.appendChild(logo);
+        logo.style.objectFit = "contain"
         logo.style.width = "70px"
-        logo.style.marginTop = "30px"
-        logo.style.marginLeft = "25px"
-        logo.style.borderRadius = "5px"
 
         // Unordered List
         let ul = document.createElement("ul")
-        console.log(ul);
-        x.appendChild(ul)
+        ul.style.padding = "0px"
+        ul.style.margin = "0px"
+        ul.style.display = "flex"
+        ul.style.gap = "20px"
+        Boxed.appendChild(ul)
 
 
         // Lists
         let listOne = document.createElement("li")
-        console.log(listOne);
         listOne.innerText = "Home"
+        listOne.style.fontFamily = "Poppins"
         ul.appendChild(listOne)
-        listOne.style.color = "black"
+        listOne.style.color = "white"
         listOne.style.listStyle = "none"
-        listOne.style.marginLeft = "300px"
-        listOne.style.marginTop = "-50px"
+
+        let listTwo = document.createElement("li")
+        listTwo.innerText = "About"
+        listTwo.style.fontFamily = "Poppins"
+        ul.appendChild(listTwo)
+        listTwo.style.color = "white"
+        listTwo.style.listStyle = "none"
+
+        let listThree = document.createElement("li")
+        listThree.innerText = "Services"
+        listThree.style.fontFamily = "Poppins"
+        ul.appendChild(listThree)
+        listThree.style.color = "white"
+        listThree.style.listStyle = "none"
+
+        let listFour = document.createElement("li")
+        listFour.innerText = "Contact"
+        listFour.style.fontFamily = "Poppins"
+        ul.appendChild(listFour)
+        listFour.style.color = "white"
+        listFour.style.listStyle = "none"
+
+
+        // Header Close Here
+
+        // Banner Section Start Here
+
+        let banner = document.createElement("section")
+        banner.setAttribute("class", "BannerSection")
+        banner.style.height = "100vh"
+        document.body.appendChild(banner)
+
+        let bannerImage = document.createElement("img")
+        bannerImage.setAttribute("src", "public/BannerNew.jpg")
+        bannerImage.style.width = "100%"
+        bannerImage.style.height = "100%"
+        bannerImage.style.objectFit = "cover"
+        bannerImage.style.display = "block"
+        banner.appendChild(bannerImage)
+
+        // Banner Section Close
+
+        // About Section Start
+
+        let aboutSection = document.createElement("section")
+        aboutSection.setAttribute("class", "aboutSection")
+        aboutSection.style.padding = "60px 0px"
+        document.body.appendChild(aboutSection)
+
+        let boundry = document.createElement("div")
+        boundry.setAttribute("class", "container")
+        boundry.style.display = "flex"
+        boundry.style.alignItems = "center"
+        boundry.style.justifyContent = "space-between"
+        aboutSection.appendChild(boundry);
+
+        let LeftBox = document.createElement("div")
+        LeftBox.style.width = "48%"
+        boundry.appendChild(LeftBox)
+
+        let aboutimage = document.createElement("img")
+        aboutimage.setAttribute("src", "public/banner.jpg")
+        aboutimage.style.width = "100%"
+        aboutimage.style.height = "100%"
+        aboutimage.style.objectFit = "cover"
+        LeftBox.appendChild(aboutimage)
+
+        // About Section Close
 
     </script>
 </body>
