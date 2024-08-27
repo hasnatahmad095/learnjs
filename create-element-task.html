@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element Template</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- Header Start -->
+
+    <script>
+
+        // Main Div
+
+        let q = document.createElement("header")
+        console.log(q);
+        q.style.backgroundColor = "#fff"
+        q.style.boxShadow = "0 2px 5px 0 rgba(0, 0, 0, 0.16)"
+        q.style.padding = "16px 32px"
+        q.style.margin = "0"
+        q.style.display = "flex"
+        q.style.alignItems = "center"
+        q.style.flexWrap = "wrap"
+        q.style.position = "sticky"
+        q.style.top = "0"
+        q.style.left = "0"
+        q.style.right = "0"
+        q.style.zIndex = "10"
+        document.body.appendChild(q)
+
+        // LeftBox
+
+        let w = document.createElement("div")
+        w.style.width = "50%"
+        w.style.display = "flex"
+        w.style.justifyContent = "Start"
+        w.style.alignItems = "center"
+        q.appendChild(w)
+
+        // Left Box Content
+
+        let r = document.createElement("a")
+        r.setAttribute("href", "#.")
+        r.innerHTML = "Gourmet au Catering"
+        r.style.textDecoration = "none"
+        r.style.letterSpacing = "4px"
+        r.style.fontSize = "15px"
+        w.appendChild(r)
+
+
+        // Right Box
+
+        let e = document.createElement("div")
+        e.style.width = "50%"
+        e.style.display = "flex"
+        e.style.justifyContent = "flex-end"
+        e.style.alignItems = "center"
+        q.appendChild(e)
+        
+        // Right Box Content
+
+        let unorderList = document.createElement("ul")
+        unorderList.style.display = "flex"
+        unorderList.style.margin = "0"
+        unorderList.style.padding = "0"
+        e.appendChild(unorderList)
+
+        let listStyle = document.createElement("li")
+        listStyle.style.listStyle = "none"
+        unorderList.appendChild(listStyle) 
+
+        let linkText = document.createElement("a")
+        linkText.style.textDecoration = "none"
+        linkText.style.letterSpacing = "4px"
+        linkText.style.fontSize = "15px"
+        linkText.style.padding = "0px 20px"
+        linkText.setAttribute("href", "#.")
+        linkText.innerHTML = "About"
+        listStyle.appendChild(linkText)
+
+        let listStyleTwo = document.createElement("li")
+        listStyleTwo.style.listStyle = "none"
+        unorderList.appendChild(listStyleTwo) 
+
+        let linkTextTwo = document.createElement("a")
+        linkTextTwo.style.textDecoration = "none"
+        linkTextTwo.style.letterSpacing = "4px"
+        linkTextTwo.style.fontSize = "15px"
+        linkTextTwo.style.padding = "0px 20px"
+        linkTextTwo.setAttribute("href", "#.")
+        linkTextTwo.innerHTML = "Menu"
+        listStyleTwo.appendChild(linkTextTwo)
+        
+        let listStyleThree = document.createElement("li")
+        listStyleThree.style.listStyle = "none"
+        unorderList.appendChild(listStyleThree) 
+
+        let linkTextThree = document.createElement("a")
+        linkTextThree.style.textDecoration = "none"
+        linkTextThree.style.letterSpacing = "4px"
+        linkTextThree.style.fontSize = "15px"
+        linkTextThree.style.padding = "0px 20px"
+        linkTextThree.setAttribute("href", "#.")
+        linkTextThree.innerHTML = "Contact"
+        listStyleTwo.appendChild(linkTextThree)
+        
+    </script>
+
+    <!-- Header Close -->
+
+    <!-- Banner Start -->
+
+    <script>
+
+        // Image
+
+        let BannerSection = document.createElement("div")
+        BannerSection.style.position = "relative"
+        BannerSection.style.textAlign = "center"
+        document.body.appendChild(BannerSection)
+
+        let bannerImage = document.createElement("img")
+        bannerImage.setAttribute("src", "public/Banner.jpg")
+        bannerImage.style.width = "100%"
+        bannerImage.style.maxWidth = "90%"
+        bannerImage.style.margin = "0 auto"
+        bannerImage.style.height = "100%"
+        BannerSection.appendChild(bannerImage)
+
+    </script>
+
+    <!-- Banner Close -->
+
+</body>
+</html>
