@@ -22,6 +22,10 @@
 </head>
 
 <body>
+
+
+
+
     <script>
 
         // Header Start Here
@@ -130,8 +134,15 @@
         aboutimage.setAttribute("src", "public/banner.jpg")
         aboutimage.style.width = "100%"
         aboutimage.style.height = "100%"
+        aboutimage.style.display = "block"
         aboutimage.style.objectFit = "cover"
         LeftBox.appendChild(aboutimage)
+
+
+        let RightBox = document.createElement("div")
+        RightBox.textContent = "Inner Text"
+        RightBox.style.width = "48%"
+        boundry.appendChild(RightBox)
 
         // About Section Close
 
