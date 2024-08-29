@@ -1,123 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Element Template</title>
     <style>
-        body {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .container {
-            width: 100%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
-    
-
+  </head>
+  <body>
     <!-- Header Start -->
 
     <script>
+      // Main Div
 
-        // Main Div
+      let q = document.createElement("header");
+      console.log(q);
+      q.style.backgroundColor = "#fff";
+      q.style.boxShadow = "0 2px 5px 0 rgba(0, 0, 0, 0.16)";
+      q.style.padding = "16px 32px";
+      q.style.margin = "0";
+      q.style.display = "flex";
+      q.style.alignItems = "center";
+      q.style.flexWrap = "wrap";
+      q.style.position = "sticky";
+      q.style.top = "0";
+      q.style.left = "0";
+      q.style.right = "0";
+      q.style.zIndex = "10";
+      document.body.appendChild(q);
 
-        let q = document.createElement("header")
-        console.log(q);
-        q.style.backgroundColor = "#fff"
-        q.style.boxShadow = "0 2px 5px 0 rgba(0, 0, 0, 0.16)"
-        q.style.padding = "16px 32px"
-        q.style.margin = "0"
-        q.style.display = "flex"
-        q.style.alignItems = "center"
-        q.style.flexWrap = "wrap"
-        q.style.position = "sticky"
-        q.style.top = "0"
-        q.style.left = "0"
-        q.style.right = "0"
-        q.style.zIndex = "10"
-        document.body.appendChild(q)
+      // LeftBox
 
-        // LeftBox
+      let w = document.createElement("div");
+      w.style.width = "50%";
+      w.style.display = "flex";
+      w.style.justifyContent = "Start";
+      w.style.alignItems = "center";
+      q.appendChild(w);
 
-        let w = document.createElement("div")
-        w.style.width = "50%"
-        w.style.display = "flex"
-        w.style.justifyContent = "Start"
-        w.style.alignItems = "center"
-        q.appendChild(w)
+      // Left Box Content
 
-        // Left Box Content
+      let r = document.createElement("a");
+      r.setAttribute("href", "#.");
+      r.innerHTML = "Gourmet au Catering";
+      r.style.textDecoration = "none";
+      r.style.letterSpacing = "4px";
+      r.style.fontSize = "15px";
+      w.appendChild(r);
 
-        let r = document.createElement("a")
-        r.setAttribute("href", "#.")
-        r.innerHTML = "Gourmet au Catering"
-        r.style.textDecoration = "none"
-        r.style.letterSpacing = "4px"
-        r.style.fontSize = "15px"
-        w.appendChild(r)
+      // Right Box
 
+      let e = document.createElement("div");
+      e.style.width = "50%";
+      e.style.display = "flex";
+      e.style.justifyContent = "flex-end";
+      e.style.alignItems = "center";
+      q.appendChild(e);
 
-        // Right Box
+      // Right Box Content
 
-        let e = document.createElement("div")
-        e.style.width = "50%"
-        e.style.display = "flex"
-        e.style.justifyContent = "flex-end"
-        e.style.alignItems = "center"
-        q.appendChild(e)
-        
-        // Right Box Content
+      let unorderList = document.createElement("ul");
+      unorderList.style.display = "flex";
+      unorderList.style.margin = "0";
+      unorderList.style.padding = "0";
+      e.appendChild(unorderList);
 
-        let unorderList = document.createElement("ul")
-        unorderList.style.display = "flex"
-        unorderList.style.margin = "0"
-        unorderList.style.padding = "0"
-        e.appendChild(unorderList)
+      let listStyle = document.createElement("li");
+      listStyle.style.listStyle = "none";
+      unorderList.appendChild(listStyle);
 
-        let listStyle = document.createElement("li")
-        listStyle.style.listStyle = "none"
-        unorderList.appendChild(listStyle) 
+      let linkText = document.createElement("a");
+      linkText.style.textDecoration = "none";
+      linkText.style.letterSpacing = "4px";
+      linkText.style.fontSize = "15px";
+      linkText.style.padding = "0px 20px";
+      linkText.setAttribute("href", "#.");
+      linkText.innerHTML = "About";
+      listStyle.appendChild(linkText);
 
-        let linkText = document.createElement("a")
-        linkText.style.textDecoration = "none"
-        linkText.style.letterSpacing = "4px"
-        linkText.style.fontSize = "15px"
-        linkText.style.padding = "0px 20px"
-        linkText.setAttribute("href", "#.")
-        linkText.innerHTML = "About"
-        listStyle.appendChild(linkText)
+      let listStyleTwo = document.createElement("li");
+      listStyleTwo.style.listStyle = "none";
+      unorderList.appendChild(listStyleTwo);
 
-        let listStyleTwo = document.createElement("li")
-        listStyleTwo.style.listStyle = "none"
-        unorderList.appendChild(listStyleTwo) 
+      let linkTextTwo = document.createElement("a");
+      linkTextTwo.style.textDecoration = "none";
+      linkTextTwo.style.letterSpacing = "4px";
+      linkTextTwo.style.fontSize = "15px";
+      linkTextTwo.style.padding = "0px 20px";
+      linkTextTwo.setAttribute("href", "#.");
+      linkTextTwo.innerHTML = "Menu";
+      listStyleTwo.appendChild(linkTextTwo);
 
-        let linkTextTwo = document.createElement("a")
-        linkTextTwo.style.textDecoration = "none"
-        linkTextTwo.style.letterSpacing = "4px"
-        linkTextTwo.style.fontSize = "15px"
-        linkTextTwo.style.padding = "0px 20px"
-        linkTextTwo.setAttribute("href", "#.")
-        linkTextTwo.innerHTML = "Menu"
-        listStyleTwo.appendChild(linkTextTwo)
-        
-        let listStyleThree = document.createElement("li")
-        listStyleThree.style.listStyle = "none"
-        unorderList.appendChild(listStyleThree) 
+      let listStyleThree = document.createElement("li");
+      listStyleThree.style.listStyle = "none";
+      unorderList.appendChild(listStyleThree);
 
-        let linkTextThree = document.createElement("a")
-        linkTextThree.style.textDecoration = "none"
-        linkTextThree.style.letterSpacing = "4px"
-        linkTextThree.style.fontSize = "15px"
-        linkTextThree.style.padding = "0px 20px"
-        linkTextThree.setAttribute("href", "#.")
-        linkTextThree.innerHTML = "Contact"
-        listStyleTwo.appendChild(linkTextThree)
-        
+      let linkTextThree = document.createElement("a");
+      linkTextThree.style.textDecoration = "none";
+      linkTextThree.style.letterSpacing = "4px";
+      linkTextThree.style.fontSize = "15px";
+      linkTextThree.style.padding = "0px 20px";
+      linkTextThree.setAttribute("href", "#.");
+      linkTextThree.innerHTML = "Contact";
+      listStyleTwo.appendChild(linkTextThree);
     </script>
 
     <!-- Header Close -->
@@ -125,25 +120,186 @@
     <!-- Banner Start -->
 
     <script>
+      // Image
 
-        // Image
+      let BannerSection = document.createElement("div");
+      BannerSection.style.position = "relative";
+      document.body.appendChild(BannerSection);
 
-        let BannerSection = document.createElement("div")
-        BannerSection.style.position = "relative"
-        BannerSection.style.textAlign = "center"
-        document.body.appendChild(BannerSection)
+      let bannerImage = document.createElement("img");
+      bannerImage.setAttribute("src", "public/bannerImage.jpg");
+      bannerImage.style.width = "100%";
+      bannerImage.style.maxWidth = "85%";
+      bannerImage.style.margin = "0 auto";
+      bannerImage.style.display = "block";
+      bannerImage.style.height = "100%";
+      BannerSection.appendChild(bannerImage);
 
-        let bannerImage = document.createElement("img")
-        bannerImage.setAttribute("src", "public/Banner.jpg")
-        bannerImage.style.width = "100%"
-        bannerImage.style.maxWidth = "90%"
-        bannerImage.style.margin = "0 auto"
-        bannerImage.style.height = "100%"
-        BannerSection.appendChild(bannerImage)
-
+      let bannerText = document.createElement("p");
+      bannerText.innerHTML = "Le Catering";
+      bannerText.style.color = "#58595D";
+      bannerText.style.fontSize = "36px";
+      bannerText.style.lineHeight = "54px";
+      bannerText.style.fontWeight = "400";
+      bannerText.style.position = "absolute";
+      bannerText.style.bottom = "10px";
+      bannerText.style.left = "9%";
+      bannerText.style.width = "85%";
+      bannerText.style.margin = "0 auto";
+      bannerText.style.zIndex = "999";
+      BannerSection.appendChild(bannerText);
     </script>
 
     <!-- Banner Close -->
 
-</body>
+    <!-- About Section Start -->
+
+    <script>
+      // Left Side
+
+      let Section1LeftSide = document.createElement("div");
+      Section1LeftSide.setAttribute("class", "container");
+      Section1LeftSide.style.width = "100%";
+      Section1LeftSide.style.display = "flex";
+      Section1LeftSide.style.padding = "80px 0px";
+      Section1LeftSide.style.borderBottom = "1px solid #eee";
+      document.body.appendChild(Section1LeftSide);
+
+      let leftSide = document.createElement("div");
+      leftSide.style.width = "50%";
+      Section1LeftSide.appendChild(leftSide);
+
+      let leftImage = document.createElement("img");
+      leftImage.style.width = "100%";
+      leftImage.createAttribute("src", "public/LeftSideImage.jpg");
+      leftSide.appendChild(leftImage);
+
+      // Right Side
+
+      let rightSide = document.createElement("div");
+      rightSide.style.width = "50%";
+      rightSide.style.paddingLeft = "50px";
+      Section1LeftSide.appendChild(rightSide);
+
+      let rightSideHeading = document.createElement("h2");
+      rightSideHeading.innerText = "About Catering";
+      rightSideHeading.style.fontSize = "36px";
+      rightSideHeading.style.lineHeight = "54px";
+      rightSideHeading.style.letterSpacing = "4px";
+      rightSideHeading.style.color = "#000";
+      rightSideHeading.style.fontWeight = "400";
+      rightSideHeading.style.textAlign = "center";
+      rightSide.append(rightSideHeading);
+
+      let rightSideSubHeading = document.createElement("h5");
+      rightSideSubHeading.innerText = "Tradition since 1889";
+      rightSideSubHeading.style.fontSize = "18px";
+      rightSideSubHeading.style.lineHeight = "27px";
+      rightSideSubHeading.style.letterSpacing = "4px";
+      rightSideSubHeading.style.color = "#000";
+      rightSideSubHeading.style.fontWeight = "400";
+      rightSideSubHeading.style.textAlign = "center";
+      rightSide.append(rightSideSubHeading);
+
+      let rightSideparagraph = document.createElement("p");
+      rightSideparagraph.innerText =
+        "The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients.";
+      rightSideparagraph.style.fontSize = "18px";
+      rightSideparagraph.style.lineHeight = "27px";
+      rightSideparagraph.style.color = "#000";
+      rightSideparagraph.style.fontWeight = "400";
+      rightSideparagraph.style.textAlign = "left";
+      rightSide.append(rightSideparagraph);
+
+      let rightSideLightparagraph = document.createElement("p");
+      rightSideLightparagraph.innerText =
+        "The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients.";
+      rightSideLightparagraph.style.fontSize = "18px";
+      rightSideLightparagraph.style.lineHeight = "27px";
+      rightSideLightparagraph.style.color = "#757575";
+      rightSideLightparagraph.style.fontWeight = "400";
+      rightSideLightparagraph.style.textAlign = "left";
+      rightSide.append(rightSideLightparagraph);
+
+    </script>
+
+    <!-- About Section Close -->
+
+
+    <!-- About Section 2 Start -->
+
+    <script>
+        // Left Side
+  
+        let Section2rightSide = document.createElement("div");
+        Section2rightSide.setAttribute("class", "container");
+        Section2rightSide.style.width = "100%";
+        Section2rightSide.style.display = "flex";
+        Section2rightSide.style.flexDirection = "row-reverse";
+        Section2rightSide.style.padding = "80px 0px";
+        Section2rightSide.style.borderBottom = "1px solid #eee";
+        document.body.appendChild(Section2rightSide);
+  
+        let Section2leftSide = document.createElement("div");
+        Section2leftSide.style.width = "50%";
+        Section2rightSide.appendChild(Section2leftSide);
+  
+        let Section2leftImage = document.createElement("img");
+        Section2leftImage.style.width = "100%";
+        Section2leftImage.setAttribute("src", "public/rightSideImage.jpg");
+        Section2leftSide.appendChild(Section2leftImage);
+  
+        // Right Side
+  
+        let Section2rightSide = document.createElement("div");
+        Section2rightSide.style.width = "50%";
+        Section2rightSide.style.paddingLeft = "50px";
+        Section2rightSide.appendChild(Section2rightSide);
+  
+        let Section2rightSideHeading = document.createElement("h2");
+        Section2rightSideHeading.innerText = "About Catering";
+        Section2rightSideHeading.style.fontSize = "36px";
+        Section2rightSideHeading.style.lineHeight = "54px";
+        Section2rightSideHeading.style.letterSpacing = "4px";
+        Section2rightSideHeading.style.color = "#000";
+        Section2rightSideHeading.style.fontWeight = "400";
+        Section2rightSideHeading.style.textAlign = "center";
+        rightSide.append(Section2rightSideHeading);
+  
+        let Section2rightSideSubHeading = document.createElement("h5");
+        Section2rightSideSubHeading.innerText = "Tradition since 1889";
+        Section2rightSideSubHeading.style.fontSize = "18px";
+        Section2rightSideSubHeading.style.lineHeight = "27px";
+        Section2rightSideSubHeading.style.letterSpacing = "4px";
+        Section2rightSideSubHeading.style.color = "#000";
+        Section2rightSideSubHeading.style.fontWeight = "400";
+        Section2rightSideSubHeading.style.textAlign = "center";
+        rightSide.append(Section2rightSideSubHeading);
+  
+        let Section2rightSideparagraph = document.createElement("p");
+        Section2rightSideparagraph.innerText =
+          "The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients.";
+        Section2rightSideparagraph.style.fontSize = "18px";
+        Section2rightSideparagraph.style.lineHeight = "27px";
+        Section2rightSideparagraph.style.color = "#000";
+        Section2rightSideparagraph.style.fontWeight = "400";
+        Section2rightSideparagraph.style.textAlign = "left";
+        rightSide.append(Section2rightSideparagraph);
+  
+        let Section2rightSideLightparagraph = document.createElement("p");
+        Section2rightSideLightparagraph.innerText =
+          "The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients.";
+        Section2rightSideLightparagraph.style.fontSize = "18px";
+        Section2rightSideLightparagraph.style.lineHeight = "27px";
+        Section2rightSideLightparagraph.style.color = "#757575";
+        Section2rightSideLightparagraph.style.fontWeight = "400";
+        Section2rightSideLightparagraph.style.textAlign = "left";
+        rightSide.append(Section2rightSideLightparagraph);
+        
+      </script>
+  
+      <!-- About Section 2 Close -->
+
+
+  </body>
 </html>
