@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Head Tail</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <button onclick="flipcoin()">Flip Coin</button>
 
     <p class="paragraph"></p>
 
     <script>
-        function flipcoin() {
-            let RandomValue = Math.random() * 1
-            console.log(RandomValue);
+      function flipcoin() {
+        let RandomValue = Math.random() * 1;
+        console.log(RandomValue);
 
-            if (RandomValue < 0.5) {
-                document.getElementsByClassName("paragraph")[0].textContent = "It's Head";
-            } else {
-                document.getElementsByClassName("paragraph")[0].textContent = "It's Tail";
-            }
-
+        if (RandomValue < 0.5) {
+          document.getElementsByClassName("paragraph")[0].textContent =
+            "It's Head";
+        } else {
+          document.getElementsByClassName("paragraph")[0].textContent =
+            "It's Tail";
         }
+      }
     </script>
-</body>
-
+  </body>
 </html>

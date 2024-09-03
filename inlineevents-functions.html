@@ -15,11 +15,32 @@
     <button class="btn" onclick="stylechange()">OnClick</button>
 
     <script>
+<<<<<<< HEAD
       let clickbtn = document.getElementsByClassName("btn");
       console.log(clickbtn[0], "GetBtns");
 
       function stylechange() {
         clickbtn[0].classList.toggle("stylechange");
+=======
+      let btn = document.getElementsByClassName("btn");
+      console.log(btn, "btn");
+
+      //   function chngecolor() {
+      //     btn[0].style.backgroundColor = "pink"
+      //     btn[0].classList.add("active")
+      //   }
+
+      //   function toggle() {
+      //     btn[0].style.backgroundColor = "red";
+      //   }
+
+      //   function toggle() {
+      //     btn[0].classList.toggle("active");
+      //   }
+
+      function mouse(element) {
+        element.classList.toggle("active");
+>>>>>>> 45fda7921c5910afe65e2405b1b92a3baf6580d4
       }
     </script>
 
