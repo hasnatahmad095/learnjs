@@ -4,46 +4,129 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inline Events & Function Declaration</title>
-    <style>
-      .btn {
-        width: 50px;
-        height: 50px;
-        background-color: yellow;
-        border-radius: 50%;
-      }
-
-      .active {
-        background-color: purple;
-      }
-    </style>
-    <!-- onclick="toggle()"
-       -->
+    <link rel="stylesheet" href="/Style.css">
   </head>
 
-  <body>
-    <button class="btn" onmouseover="mouse(this)"></button>
+  <body onload="onloadfunction()" style="text-align: center;">
+    <!-- onclick Function Start -->
+
+    <h2>OnClick Function</h2>
+
+    <button class="btn" onclick="stylechange()">OnClick</button>
 
     <script>
+      let clickbtn = document.getElementsByClassName("btn");
+      console.log(clickbtn[0], "GetBtns");
 
-      let btn = document.getElementsByClassName("btn");
-      console.log(btn, "btn");
-
-    //   function chngecolor() {
-    //     btn[0].style.backgroundColor = "pink"
-    //     btn[0].classList.add("active")
-    //   }
-
-    //   function toggle() {
-    //     btn[0].style.backgroundColor = "red";
-    //   }
-
-    //   function toggle() {
-    //     btn[0].classList.toggle("active");
-    //   }
-
-      function mouse(element) {
-        element.classList.toggle("active");
+      function stylechange() {
+        clickbtn[0].classList.toggle("stylechange");
       }
     </script>
+
+    <!-- OnClick Function End -->
+
+    <!-- OnChange Function Start -->
+
+    <h2>OnChange Function</h2>
+
+    <select name="ColorSeclect" id="ColorSelect" onchange="selectColor()">
+      <option value="grey">grey</option>
+      <option value="red">Red</option>
+      <option value="yellow">yellow</option>
+      <option value="green">green</option>
+    </select>
+
+    <div class="changebox">
+      <h2>OnChange Function Box</h2>
+    </div>
+
+    <script>
+      let changeColor = document.getElementById("ColorSelect");
+      let changebox = document.getElementsByClassName("changebox");
+      console.log(changebox[0]);
+      console.log(changeColor, "ChangeColor Working");
+
+      // function OnChange() {
+      //   changeColor.classList.toggle("OnChangeyellow")
+      // }
+
+      function selectColor() {
+        let selectedColor = changeColor.value;
+        changebox[0].style.backgroundColor = selectedColor;
+      }
+    </script>
+
+    <!-- OnChange Function End -->
+
+    <!-- OnMouseOver Function Start -->
+
+    <h2>OnMouseOver Function</h2>
+
+    <button class="MouseOver" onmouseover="MouseOverbtn()">OnMouseOver</button>
+
+    <script>
+      let mouseOverFunction = document.querySelector(".MouseOver");
+      console.log(mouseOverFunction);
+
+      function MouseOverbtn() {
+        mouseOverFunction.classList.toggle("MouseOverbtn");
+      }
+    </script>
+
+    <!-- OnMouseOver Function End -->
+
+    <!-- OnMouseOut Function Start -->
+
+    <h2>OnMouseOut Function</h2>
+
+    <button class="MouseOut" onmouseout="MouseOutbtn()">OnMouseOut</button>
+
+    <script>
+      let mouseOutFunction = document.querySelector(".MouseOut");
+      console.log(mouseOutFunction);
+
+      function MouseOutbtn() {
+        mouseOutFunction.classList.toggle("MouseOutbtn");
+      }
+    </script>
+
+    <!-- OnMouseOut Function End -->
+
+    <!-- OnKeyDown Function Start -->
+
+    <h2>OnKeyDown Function</h2>
+
+    <input
+      type="text"
+      onkeydown="handleKeydown(event)"
+      placeholder="Press any key"
+    />
+
+    <script>
+      function handleKeydown(event) {
+        const keyPressed = event.key;
+        console.log(keyPressed);
+
+        alert("You pressed the key: " + keyPressed);
+      }
+    </script>
+
+    <!-- OnKeyDown Function End -->
+
+    <!-- Onload Function Start -->
+
+    <div class="loader" id="loader">
+      <h2 style="color: white">Loading...</h2>
+    </div>
+
+    <script>
+      function onloadfunction() {
+        console.log("OnLoad Working");
+        document.getElementById("loader").classList.add("hidden");
+        window.onload = onloadfunction;
+      }
+    </script>
+
+    <!-- Onload Function End -->
   </body>
 </html>
