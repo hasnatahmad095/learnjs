@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer Functions</title>
-</head>
+</head>         
 
 <body>
     <h1>
@@ -46,34 +46,44 @@
 <!----------------------------------------------------------------------------- setInterval ------------------------------------------------------------>
 <!-- <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>setInterval Example</title>
     <style>
-        #clock {
-            font-size: 2em;
-            font-family: Arial, sans-serif;
-        }
+      #clock {
+        font-size: 2em;
+        font-family: Arial, sans-serif;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="clock"></div>
 
     <script>
-        function updateClock() {
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-        }
+      function updateClock() {
+        const now = new Date();
+        console.log(now, "now");
 
-        setInterval(updateClock, 1000);
+        const hours = now.getHours() % 12 || 12;
+        const amPm = now.getHours() < 12 ? "AM" : "PM";
+        console.log(`${hours} ${amPm}`);
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        console.log(minutes, "minutes");
 
-        updateClock();
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+        console.log(seconds, "seconds");
+
+        document.getElementById(
+          "clock"
+        ).textContent = `${hours}:${minutes}:${seconds}: ${amPm} `;
+      }
+
+      setInterval(updateClock, 1000);
+
+      updateClock();
     </script>
-</body>
+  </body>
 </html> -->
 
 <!----------------------------------------------------------------------------- setTimeout ------------------------------------------------------------>
@@ -87,10 +97,10 @@
 <body>
     <script>
         function showAlert() {
-            alert('This alert appears after 3 seconds!');
+            alert('This alert appears after 1 seconds!');
         }
 
-        setTimeout(showAlert, 3000);
+        setTimeout(showAlert, 1000);
     </script>
 </body>
 </html> -->
@@ -98,41 +108,26 @@
 <!----------------------------------------------------------------------------- clearInterval ------------------------------------------------------------>
 <!-- <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>clearInterval Example</title>
-    <style>
-        #clock {
-            font-size: 2em;
-            font-family: Arial, sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <div id="clock"></div>
-
+    <style></style>
+  </head>
+  <body>
     <script>
-        let intervalID;
 
-        function updateClock() {
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+      let count = 0;
+
+      const intervalId = setInterval(() => {
+        count++;
+        console.log(`Count: ${count}`);
+
+        if (count === 5) {
+          clearInterval(intervalId);
+          console.log("Interval cleared");
         }
-
-        function stopClock() {
-            clearInterval(intervalID);
-            console.log('Clock stopped');
-        }
-
-        intervalID = setInterval(updateClock, 1000);
-
-        setTimeout(stopClock, 10000);
-
-        updateClock();
+      }, 1000);
     </script>
-</body>
+  </body>
 </html> -->
