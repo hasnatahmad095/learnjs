@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Iteration Methods</title>
+  </head>
+  <body>
+    <h2>Array Iteration Methods in JavaScript</h2>
+    <p>JavaScript provides several methods to iterate over arrays efficiently. Below are some key methods:</p>
+
+    <h2>1. map() - Creates a new array by applying a function to each element</h2>
+    <pre><code>const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled);
+// Output: [2, 4, 6, 8]</code></pre>
+
+    <h2>2. filter() - Creates a new array with elements that pass a test</h2>
+    <pre><code>const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers);
+// Output: [2, 4]</code></pre>
+
+    <h2>3. reduce() - Reduces an array to a single value</h2>
+    <pre><code>const sum = numbers.reduce((acc, num) => acc + num, 0);
+console.log(sum);
+// Output: 10</code></pre>
+
+    <h2>4. forEach() - Executes a function for each element</h2>
+    <pre><code>numbers.forEach(num => console.log(num * 2));
+// Output: 2, 4, 6, 8 (each logged separately)</code></pre>
+
+    <h2>5. find() - Returns the first element that passes a test</h2>
+    <pre><code>const found = numbers.find(num => num > 2);
+console.log(found);
+// Output: 3</code></pre>
+
+    <h2>6. some() - Checks if at least one element passes a test</h2>
+    <pre><code>const hasEven = numbers.some(num => num % 2 === 0);
+console.log(hasEven);
+// Output: true</code></pre>
+
+    <h2>7. every() - Checks if all elements pass a test</h2>
+    <pre><code>const allPositive = numbers.every(num => num > 0);
+console.log(allPositive);
+// Output: true</code></pre>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Objects</title>
+  </head>
+  <body>
+    <h2>Object Properties & Methods</h2>
+    <pre><code>const person = {
+  name: "John",
+  age: 30,
+  greet() {
+    return `Hello, my name is ${this.name}`;
+  }
+};
+console.log(person.greet());
+// Output: Hello, my name is John</code></pre>
+
+    <h2>Object Destructuring</h2>
+    <pre><code>const user = { firstName: "Alice", lastName: "Smith", age: 25 };
+const { firstName, age } = user;
+console.log(firstName, age);
+// Output: Alice 25</code></pre>
+
+    <h2>Object Spread ({...obj})</h2>
+    <pre><code>const obj1 = { a: 1, b: 2 };
+const obj2 = { ...obj1, c: 3 };
+console.log(obj2);
+// Output: { a: 1, b: 2, c: 3 }</code></pre>
+
+    <h2>Object Methods</h2>
+    <pre><code>const data = { x: 10, y: 20, z: 30 };
+console.log(Object.keys(data));
+// Output: ["x", "y", "z"]
+console.log(Object.values(data));
+// Output: [10, 20, 30]
+console.log(Object.entries(data));
+// Output: [["x", 10], ["y", 20], ["z", 30]]</code></pre>
+
+    <h2>this Keyword</h2>
+    <pre><code>const car = {
+  brand: "Toyota",
+  model: "Corolla",
+  getDetails() {
+    return `${this.brand} ${this.model}`;
+  }
+};
+console.log(car.getDetails());
+// Output: Toyota Corolla</code></pre>
+  </body>
+</html>

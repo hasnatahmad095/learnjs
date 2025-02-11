@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Arrays</title>
+  </head>
+  <body>
+    <h2>Destructuring Arrays in JavaScript</h2>
+    <p>Destructuring allows you to extract values from arrays and assign them to variables in a more concise way.</p>
+
+    <h2>1. Basic Array Destructuring</h2>
+    <pre><code>const fruits = ["Apple", "Banana", "Cherry"];
+const [first, second, third] = fruits;
+console.log(first, second, third);
+// Output: Apple Banana Cherry</code></pre>
+
+    <h2>2. Skipping Elements</h2>
+    <pre><code>const colors = ["Red", "Green", "Blue", "Yellow"];
+const [primary, , tertiary] = colors;
+console.log(primary, tertiary);
+// Output: Red Blue</code></pre>
+
+    <h2>3. Using Rest Operator</h2>
+    <pre><code>const numbers = [1, 2, 3, 4, 5];
+const [firstNum, secondNum, ...rest] = numbers;
+console.log(firstNum, secondNum, rest);
+// Output: 1 2 [3, 4, 5]</code></pre>
+
+    <h2>4. Swapping Variables</h2>
+    <pre><code>let a = 10, b = 20;
+[a, b] = [b, a];
+console.log(a, b);
+// Output: 20 10</code></pre>
+  </body>
+</html>

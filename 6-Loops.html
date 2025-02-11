@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+  </head>
+  <body>
+    <h2>JavaScript Loops</h2>
+    <p>Loops are used to execute a block of code repeatedly until a specified condition is met.</p>
+
+    <h2>1. for Loop</h2>
+    <p>Loops through a block of code a specified number of times.</p>
+    <pre><code>for (let i = 0; i < 5; i++) {
+    console.log("Iteration: " + i);
+}</code></pre>
+    
+    <h2>2. while Loop</h2>
+    <p>Executes a block of code as long as the specified condition is true.</p>
+    <pre><code>let j = 0;
+while (j < 5) {
+    console.log("Iteration: " + j);
+    j++;
+}</code></pre>
+    
+    <h2>3. do...while Loop</h2>
+    <p>Executes the block of code at least once, then repeats as long as the condition is true.</p>
+    <pre><code>let k = 0;
+do {
+    console.log("Iteration: " + k);
+    k++;
+} while (k < 5);</code></pre>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Loops & Loop Control</title>
+  </head>
+  <body>
+    <h2>JavaScript Loops</h2>
+    <p>Loops are used to execute a block of code multiple times.</p>
+
+    <h2>1. for Loop</h2>
+    <p>Executes a block of code a specified number of times.</p>
+    <pre><code>for (let i = 0; i < 5; i++) {
+    console.log("Iteration: " + i);
+}</code></pre>
+    
+    <h2>2. while Loop</h2>
+    <p>Executes a block of code as long as a specified condition is true.</p>
+    <pre><code>let count = 0;
+while (count < 5) {
+    console.log("Count: " + count);
+    count++;
+}</code></pre>
+    
+    <h2>3. do...while Loop</h2>
+    <p>Executes a block of code once before checking the condition.</p>
+    <pre><code>let num = 0;
+do {
+    console.log("Number: " + num);
+    num++;
+} while (num < 5);</code></pre>
+
+    <h2>Loop Control Statements</h2>
+    <p>Used to control the flow of loops.</p>
+
+    <h2>1. break Statement</h2>
+    <p>Exits the loop when a certain condition is met.</p>
+    <pre><code>for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        break; // Stops loop when i equals 5
+    }
+    console.log(i);
+}</code></pre>
+    
+    <h2>2. continue Statement</h2>
+    <p>Skips the current iteration and continues with the next.</p>
+    <pre><code>for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue; // Skips iteration when i equals 5
+    }
+    console.log(i);
+}</code></pre>
+  </body>
+</html>

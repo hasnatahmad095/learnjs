@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Conversion & Coercion</title>
+  </head>
+  <body>
+    <h2>JavaScript Type Conversion & Coercion</h2>
+    <p>JavaScript allows conversion between different data types explicitly and implicitly.</p>
+
+    <h2>1. Type Conversion (Explicit)</h2>
+    <p>Manually converting one data type to another.</p>
+    <pre><code>let num = "123";
+let convertedNum = Number(num); // Converts string to number
+console.log(typeof convertedNum); // Output: number</code></pre>
+    
+    <pre><code>let bool = "";
+let convertedBool = Boolean(bool); // Converts empty string to false
+console.log(convertedBool); // Output: false</code></pre>
+
+    <pre><code>let str = 100;
+let convertedStr = String(str); // Converts number to string
+console.log(typeof convertedStr); // Output: string</code></pre>
+
+    <h2>2. Type Coercion (Implicit)</h2>
+    <p>JavaScript automatically converts types when needed.</p>
+    <pre><code>console.log("5" + 5); // Output: "55" (Number converted to String)
+console.log("10" - 2); // Output: 8 (String converted to Number)
+console.log(true + 1); // Output: 2 (Boolean converted to Number)
+console.log(false + "test"); // Output: "falsetest" (Boolean converted to String)</code></pre>
+  </body>
+</html>

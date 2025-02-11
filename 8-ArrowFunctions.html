@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Functions & Parameters</title>
+  </head>
+  <body>
+    <h2>Arrow Functions in JavaScript</h2>
+    <p>Arrow functions provide a shorter syntax for writing functions and automatically bind <code>this</code> to the surrounding scope.</p>
+
+    <h2>1. Basic Arrow Function</h2>
+    <pre><code>const greet = () => "Hello, world!";
+console.log(greet());</code></pre>
+
+    <h2>2. Arrow Function with Parameters</h2>
+    <p>Passing parameters to an arrow function.</p>
+    <pre><code>const add = (a, b) => a + b;
+console.log(add(5, 3)); // Output: 8</code></pre>
+
+    <h2>3. Default Parameters</h2>
+    <p>Providing default values for parameters.</p>
+    <pre><code>const multiply = (a, b = 2) => a * b;
+console.log(multiply(5)); // Output: 10
+console.log(multiply(5, 3)); // Output: 15</code></pre>
+
+    <h2>4. Rest Parameters</h2>
+    <p>Using the rest operator <code>...args</code> to handle multiple arguments.</p>
+    <pre><code>const sumAll = (...numbers) => numbers.reduce((acc, num) => acc + num, 0);
+console.log(sumAll(1, 2, 3, 4, 5)); // Output: 15</code></pre>
+
+    <h2>5. Spread Operator</h2>
+    <p>Expanding elements of an array or object.</p>
+    <pre><code>const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 4, 5, 6];
+console.log(newNumbers); // Output: [1, 2, 3, 4, 5, 6]</code></pre>
+
+    <h2>6. Arrow Function and <code>this</code></h2>
+    <p>Arrow functions do not have their own <code>this</code> context; they inherit from the enclosing scope.</p>
+    <pre><code>const person = {
+    name: "John",
+    greet: function() {
+        setTimeout(() => {
+            console.log("Hello, " + this.name);
+        }, 1000);
+    }
+};
+person.greet(); // Output: Hello, John</code></pre>
+  </body>
+</html>

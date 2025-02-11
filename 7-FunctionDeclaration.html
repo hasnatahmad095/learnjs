@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Declaration vs Function Expression</title>
+  </head>
+  <body>
+    <h2>JavaScript Functions</h2>
+    <p>Functions are reusable blocks of code used to perform a specific task.</p>
+
+    <h2>1. Function Declaration</h2>
+    <p>A function declaration defines a named function that can be called before its definition due to hoisting.</p>
+    <pre><code>function greet() {
+    console.log("Hello, world!");
+}
+
+greet(); // Calling the function</code></pre>
+    
+    <h2>2. Function Expression</h2>
+    <p>A function expression assigns an anonymous function to a variable. It is not hoisted, so it cannot be called before its definition.</p>
+    <pre><code>const greet = function() {
+    console.log("Hello, world!");
+};
+
+greet(); // Calling the function</code></pre>
+    
+    <h2>Key Differences</h2>
+    <ul>
+      <li><strong>Hoisting:</strong> Function declarations are hoisted, but function expressions are not.</li>
+      <li><strong>Anonymous Functions:</strong> Function expressions can be anonymous, whereas function declarations require a name.</li>
+      <li><strong>Usage:</strong> Function expressions are often used for callbacks or assigning functions to variables.</li>
+    </ul>
+  </body>
+</html>

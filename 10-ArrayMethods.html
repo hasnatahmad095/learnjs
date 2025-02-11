@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+  </head>
+  <body>
+    <h2>Array Methods in JavaScript</h2>
+    <p>JavaScript provides various methods to manipulate arrays. Below are some important methods:</p>
+
+    <h2>1. push() - Adds elements to the end of an array</h2>
+    <pre><code>const fruits = ["Apple", "Banana"];
+fruits.push("Cherry");
+console.log(fruits);
+// Output: ["Apple", "Banana", "Cherry"]</code></pre>
+
+    <h2>2. pop() - Removes the last element from an array</h2>
+    <pre><code>fruits.pop();
+console.log(fruits);
+// Output: ["Apple", "Banana"]</code></pre>
+
+    <h2>3. shift() - Removes the first element from an array</h2>
+    <pre><code>fruits.shift();
+console.log(fruits);
+// Output: ["Banana"]</code></pre>
+
+    <h2>4. unshift() - Adds elements to the beginning of an array</h2>
+    <pre><code>fruits.unshift("Mango");
+console.log(fruits);
+// Output: ["Mango", "Banana"]</code></pre>
+
+    <h2>5. splice() - Adds or removes elements from a specific position</h2>
+    <pre><code>const numbers = [1, 2, 3, 4, 5];
+numbers.splice(2, 1, 99);
+console.log(numbers);
+// Output: [1, 2, 99, 4, 5]</code></pre>
+
+    <h2>6. slice() - Extracts a portion of an array</h2>
+    <pre><code>const slicedNumbers = numbers.slice(1, 4);
+console.log(slicedNumbers);
+// Output: [2, 99, 4]</code></pre>
+  </body>
+</html>
