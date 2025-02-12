@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callbacks, Promises, and Async/Await</title>
+  </head>
+  <body>
+    <h2>Asynchronous JavaScript</h2>
+    <p>Check the console for outputs.</p>
+
+    <h3>Callbacks</h3>
+    <p>
+      A callback is a function passed as an argument to another function. It is
+      executed after the completion of the function it was passed to.
+    </p>
+    <script>
+      function fetchData(callback) {
+        setTimeout(() => {
+          callback("Data fetched using Callback");
+        }, 1000);
+      }
+      fetchData((data) => console.log(data));
+    </script>
+
+    <h3>Promises</h3>
+    <p>
+      A Promise is an object representing the eventual completion or failure of
+      an asynchronous operation. It can be in one of three states: pending,
+      resolved, or rejected.
+    </p>
+    <script>
+      function fetchPromise() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            let success = true;
+            success
+              ? resolve("Data fetched using Promise")
+              : reject("Error fetching data");
+          }, 1000);
+        });
+      }
+      fetchPromise()
+        .then((data) => console.log(data))
+        .catch((error) => console.error(error));
+    </script>
+
+    <h3>Async/Await</h3>
+    <p>
+      Async/Await is a modern way to handle asynchronous operations. The 'async'
+      keyword makes a function return a Promise, and 'await' pauses execution
+      until the Promise resolves.
+    </p>
+    <script>
+      async function fetchAsync() {
+        try {
+          let data = await fetchPromise();
+          console.log(data);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      fetchAsync();
+    </script>
+  </body>
+</html>
