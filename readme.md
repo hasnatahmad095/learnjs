@@ -37,7 +37,7 @@ This repository serves as a comprehensive guide to essential JavaScript concepts
 
 
 
-## 📂 Project Structure
+## 📂 Repository Structure
 
 Repository follows a structured format where each topic has its dedicated file.
 
