@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Literals</title>
+  </head>
+  <body>
+    <h2>Template Literals in JavaScript</h2>
+    <p>Template literals allow embedding expressions inside string literals using backticks (` `) instead of quotes.</p>
+
+    <h2>1. Basic Example</h2>
+    <pre><code>const name = "John";
+const greeting = `Hello, ${name}!`;
+console.log(greeting);
+// Output: Hello, John!</code></pre>
+
+    <h2>2. Multi-line Strings</h2>
+    <pre><code>const multiLine = `This is a string
+that spans multiple lines.`;
+console.log(multiLine);
+// Output: 
+// This is a string
+// that spans multiple lines.</code></pre>
+
+    <h2>3. Expression Interpolation</h2>
+    <pre><code>const a = 10;
+const b = 20;
+const sum = `The sum of ${a} and ${b} is ${a + b}.`;
+console.log(sum);
+// Output: The sum of 10 and 20 is 30.</code></pre>
+
+    <h2>4. Function Call Inside Template Literals</h2>
+    <pre><code>function getName() {
+  return "Alice";
+}
+const message = `Welcome, ${getName()}!`;
+console.log(message);
+// Output: Welcome, Alice!</code></pre>
+  </body>
+</html>

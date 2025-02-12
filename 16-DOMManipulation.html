@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <style>
+      .highlight { color: red; font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <h2 id="title">DOM Manipulation in JavaScript</h2>
+    <p class="description">Learn how to interact with the DOM using JavaScript.</p>
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+    <button id="add-item">Add Item</button>
+    <button id="remove-item">Remove Last Item</button>
+
+    <script>
+      // Selecting Elements
+      const title = document.getElementById("title");
+      const description = document.querySelector(".description");
+      const list = document.querySelector("#list");
+      const addItemBtn = document.getElementById("add-item");
+      const removeItemBtn = document.getElementById("remove-item");
+
+      // Modifying Elements
+      title.textContent = "Updated Title";
+      description.style.color = "blue";
+      title.classList.add("highlight");
+
+      // Adding & Removing Elements
+      addItemBtn.addEventListener("click", () => {
+        const newItem = document.createElement("li");
+        newItem.textContent = `Item ${list.children.length + 1}`;
+        list.appendChild(newItem);
+      });
+
+      removeItemBtn.addEventListener("click", () => {
+        if (list.lastElementChild) {
+          list.removeChild(list.lastElementChild);
+        }
+      });
+    </script>
+  </body>
+</html>
+  

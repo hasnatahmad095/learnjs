@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern JavaScript (ES6+)</title>
+  </head>
+  <body>
+    <h2>Destructuring Arrays & Objects</h2>
+    <pre><code>// Array Destructuring
+const numbers = [1, 2, 3];
+const [first, second, third] = numbers;
+console.log(first, second, third); // Output: 1 2 3
+
+// Object Destructuring
+const person = { name: "Alice", age: 25 };
+const { name, age } = person;
+console.log(name, age); // Output: Alice 25</code></pre>
+
+    <h2>Default Parameters</h2>
+    <pre><code>function greet(name = "Guest") {
+  return `Hello, ${name}!`;
+}
+console.log(greet()); // Output: Hello, Guest!
+console.log(greet("John")); // Output: Hello, John!</code></pre>
+
+    <h2>Rest & Spread Operators</h2>
+    <pre><code>// Rest Operator
+function sum(...numbers) {
+  return numbers.reduce((acc, num) => acc + num, 0);
+}
+console.log(sum(1, 2, 3, 4)); // Output: 10
+
+// Spread Operator
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+console.log(arr2); // Output: [1, 2, 3, 4, 5]</code></pre>
+
+    <h2>Arrow Functions & this</h2>
+    <pre><code>const obj = {
+  name: "Bob",
+  greet: function() {
+    setTimeout(() => {
+      console.log(`Hello, ${this.name}!`);
+    }, 1000);
+  }
+};
+obj.greet(); // Output: Hello, Bob! (uses lexical 'this')</code></pre>
+
+    <h2>Enhanced Object Literals</h2>
+    <pre><code>const age = 30;
+const user = {
+  name: "Charlie",
+  age, // No need to write age: age
+  greet() {
+    return `Hi, I'm ${this.name}.`;
+  }
+};
+console.log(user.greet()); // Output: Hi, I'm Charlie.</code></pre>
+
+    <h2>let, const, and Block Scope</h2>
+    <pre><code>{
+  let x = 10;
+  const y = 20;
+  console.log(x, y); // Output: 10 20
+}
+// console.log(x, y); // Error: x and y are not defined outside the block</code></pre>
+  </body>
+</html>
