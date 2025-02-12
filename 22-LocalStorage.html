@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localStorage in JavaScript</title>
+  </head>
+  <body>
+    <h2>localStorage in JavaScript</h2>
+    
+    <h3>What is localStorage?</h3>
+    <p>
+      The <code>localStorage</code> object allows you to store key-value pairs in the browser.
+      Data stored in <code>localStorage</code> does not expire and remains even after the browser is closed.
+    </p>
+    
+    <h3>Using <code>setItem()</code> to Store Data</h3>
+    <p>
+      The <code>setItem()</code> method is used to store data in <code>localStorage</code>.
+    </p>
+    <script>
+      localStorage.setItem("username", "JohnDoe");
+      console.log("Data saved successfully!");
+    </script>
+    
+    <h3>Using <code>getItem()</code> to Retrieve Data</h3>
+    <p>
+      The <code>getItem()</code> method retrieves stored data from <code>localStorage</code>.
+    </p>
+    <script>
+      let username = localStorage.getItem("username");
+      console.log("Retrieved username:", username);
+    </script>
+  </body>
+</html>

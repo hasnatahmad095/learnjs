@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sessionStorage in JavaScript</title>
+  </head>
+  <body>
+    <h2>sessionStorage in JavaScript</h2>
+    
+    <h3>What is sessionStorage?</h3>
+    <p>
+      The <code>sessionStorage</code> object allows you to store key-value pairs in the browser.
+      Data stored in <code>sessionStorage</code> is only available for the duration of the page session.
+      It is cleared when the page is closed.
+    </p>
+    
+    <h3>Using <code>setItem()</code> to Store Data</h3>
+    <p>
+      The <code>setItem()</code> method is used to store data in <code>sessionStorage</code>.
+    </p>
+    <script>
+      sessionStorage.setItem("username", "JohnDoe");
+      console.log("Data saved successfully!");
+    </script>
+    
+    <h3>Using <code>getItem()</code> to Retrieve Data</h3>
+    <p>
+      The <code>getItem()</code> method retrieves stored data from <code>sessionStorage</code>.
+    </p>
+    <script>
+      let username = sessionStorage.getItem("username");
+      console.log("Retrieved username:", username);
+    </script>
+  </body>
+</html>

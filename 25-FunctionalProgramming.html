@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functional Programming</title>
+  </head>
+  <body>
+    <h2>Functional Programming in JavaScript</h2>
+    
+    <h3>1. Higher-Order Functions</h3>
+    <p>A function that takes another function as an argument or returns a function.</p>
+    <script>
+      function higherOrderFunction(callback) {
+        return callback(5);
+      }
+      function square(num) {
+        return num * num;
+      }
+      console.log(higherOrderFunction(square)); // Output: 25
+    </script>
+
+    <h3>2. Pure Functions</h3>
+    <p>A function that does not modify external states and returns the same output for the same input.</p>
+    <script>
+      function add(a, b) {
+        return a + b;
+      }
+      console.log(add(2, 3)); // Output: 5
+    </script>
+
+    <h3>3. Closures</h3>
+    <p>A function that remembers the scope in which it was created.</p>
+    <script>
+      function outerFunction(x) {
+        return function innerFunction(y) {
+          return x + y;
+        };
+      }
+      const addFive = outerFunction(5);
+      console.log(addFive(3)); // Output: 8
+    </script>
+
+    <h3>4. Recursion</h3>
+    <p>A function that calls itself until a base condition is met.</p>
+    <script>
+      function factorial(n) {
+        return n === 0 ? 1 : n * factorial(n - 1);
+      }
+      console.log(factorial(5)); // Output: 120
+    </script>
+
+    <h3>5. Currying</h3>
+    <p>Transforming a function with multiple arguments into a sequence of functions.</p>
+    <script>
+      function curry(a) {
+        return function (b) {
+          return function (c) {
+            return a + b + c;
+          };
+        };
+      }
+      console.log(curry(2)(3)(4)); // Output: 9
+    </script>
+
+    <h3>6. Memoization</h3>
+    <p>Optimization technique where function results are stored to avoid redundant calculations.</p>
+    <script>
+      function memoize(fn) {
+        let cache = {};
+        return function (n) {
+          if (n in cache) {
+            return cache[n];
+          } else {
+            let result = fn(n);
+            cache[n] = result;
+            return result;
+          }
+        };
+      }
+      const fib = memoize(function (n) {
+        return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+      });
+      console.log(fib(10)); // Output: 55
+    </script>
+  </body>
+</html>

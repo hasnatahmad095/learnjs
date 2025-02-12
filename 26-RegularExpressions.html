@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expressions</title>
+  </head>
+  <body>
+    <h2>Regular Expressions in JavaScript</h2>
+    
+    <h3>What are Regular Expressions?</h3>
+    <p>
+      Regular Expressions (RegEx) are patterns used to match character combinations in strings.
+      They are commonly used for validation, searching, and text manipulation.
+    </p>
+    
+    <h3>Using <code>match()</code> to Find Matches</h3>
+    <p>
+      The <code>match()</code> method searches for matches in a string based on a regular expression.
+    </p>
+    <script>
+      let text = "JavaScript is amazing!";
+      let result = text.match(/amazing/i);
+      console.log("Match result:", result);
+    </script>
+    
+    <h3>Using <code>replace()</code> to Modify Strings</h3>
+    <p>
+      The <code>replace()</code> method replaces text that matches a pattern.
+    </p>
+    <script>
+      let newText = text.replace(/amazing/i, "awesome");
+      console.log("Replaced text:", newText);
+    </script>
+    
+    <h3>Using <code>test()</code> to Check for Matches</h3>
+    <p>
+      The <code>test()</code> method returns <code>true</code> or <code>false</code> based on whether the pattern is found.
+    </p>
+    <script>
+      let pattern = /JavaScript/i;
+      console.log("Pattern found:", pattern.test(text));
+    </script>
+    
+    <h3>Common RegEx Patterns</h3>
+    <ul>
+      <li><code>\d</code> - Matches any digit (0-9).</li>
+      <li><code>\w</code> - Matches any word character (letters, numbers, underscore).</li>
+      <li><code>\s</code> - Matches whitespace (spaces, tabs).</li>
+      <li><code>^</code> - Matches the beginning of a string.</li>
+      <li><code>$</code> - Matches the end of a string.</li>
+      <li><code>+</code> - Matches one or more occurrences.</li>
+      <li><code>?</code> - Matches zero or one occurrence.</li>
+      <li><code>*</code> - Matches zero or more occurrences.</li>
+      <li><code>{n}</code> - Matches exactly <code>n</code> occurrences.</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error Handling in JavaScript</title>
+  </head>
+  <body>
+    <h2>Error Handling in JavaScript</h2>
+    
+    <h3>try...catch...finally</h3>
+    <p>
+      The <code>try</code> block allows you to test a block of code for errors.
+      The <code>catch</code> block handles the error if one occurs.
+      The <code>finally</code> block executes code after try/catch, regardless of the result.
+    </p>
+    <script>
+      try {
+        let result = 10 / 0;
+        console.log("Result:", result);
+      } catch (error) {
+        console.log("An error occurred:", error.message);
+      } finally {
+        console.log("Execution completed.");
+      }
+    </script>
+    
+    <h3>throw Statement</h3>
+    <p>
+      The <code>throw</code> statement allows you to create custom errors.
+    </p>
+    <script>
+      function checkAge(age) {
+        if (age < 18) {
+          throw new Error("You must be at least 18 years old.");
+        }
+        return "Access granted";
+      }
+      
+      try {
+        console.log(checkAge(15));
+      } catch (error) {
+        console.log("Error:", error.message);
+      }
+    </script>
+    
+    <h3>Custom Errors</h3>
+    <p>
+      You can create custom error types by extending the <code>Error</code> class.
+    </p>
+    <script>
+      class CustomError extends Error {
+        constructor(message) {
+          super(message);
+          this.name = "CustomError";
+        }
+      }
+      
+      try {
+        throw new CustomError("This is a custom error!");
+      } catch (error) {
+        console.log(error.name + ": " + error.message);
+      }
+    </script>
+  </body>
+</html>

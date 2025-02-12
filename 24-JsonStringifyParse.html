@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON.stringify() & JSON.parse()</title>
+  </head>
+  <body>
+    <h2>JSON.stringify() & JSON.parse() in JavaScript</h2>
+    
+    <h3>What is JSON.stringify()?</h3>
+    <p>
+      The <code>JSON.stringify()</code> method converts a JavaScript object into a JSON string.
+      It is useful when storing or sending data as a string.
+    </p>
+    
+    <h3>Example:</h3>
+    <script>
+      const user = { name: "Alice", age: 25, city: "New York" };
+      const jsonString = JSON.stringify(user);
+      console.log("Stringified JSON:", jsonString);
+    </script>
+    
+    <h3>What is JSON.parse()?</h3>
+    <p>
+      The <code>JSON.parse()</code> method converts a JSON string back into a JavaScript object.
+      It is used when retrieving and working with JSON data.
+    </p>
+    
+    <h3>Example:</h3>
+    <script>
+      const parsedObject = JSON.parse(jsonString);
+      console.log("Parsed Object:", parsedObject);
+    </script>
+  </body>
+</html>
