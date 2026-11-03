@@ -1,5 +1,5 @@
 
-# JavaScript Concepts & Examples 🚀
+# JavaScript Concepts & Examples
 
 
 This repository serves as a comprehensive guide to essential JavaScript concepts, including modern ES6+ features, functional programming, error handling, asynchronous JavaScript, and more. Each topic contains a brief explanation along with code examples to help developers understand and implement JavaScript effectively.
@@ -37,7 +37,7 @@ This repository serves as a comprehensive guide to essential JavaScript concepts
 
 
 
-## 📂 Repository Structure
+## Repository Structure
 
 Repository follows a structured format where each topic has its dedicated file.
 
@@ -47,7 +47,7 @@ Each file contains:
 - Best Practices
 
 
-## 🔥 How to Use This Repository?
+## How to Use This Repository?
 
 - Clone the repository
 
@@ -57,7 +57,13 @@ Each file contains:
 - Open the folder and explore the HTML files to learn about each topic.
 
 
-## 💡 Note
+## Note
 
-This repository is created to help devs to learn JavaScript in a structured way. However mistakes can happen! If you find any errors, feel free to correct them and contribute by submitting a pull request. Your contributions will help improve this guide for everyone. 😊
+This repository is created to help devs to learn JavaScript in a structured way. However mistakes can happen! If you find any errors, feel free to correct them and contribute by submitting a pull request. Your contributions will help improve this guide for everyone.
+
+## Author
+
+Built and maintained by [Hasnat Ahmad](https://www.devhasnatahmad.com/). Need help with a project? [Get in touch](https://www.devhasnatahmad.com/contact).
+
+If this project saved you time, please give it a ⭐ on GitHub.
 
